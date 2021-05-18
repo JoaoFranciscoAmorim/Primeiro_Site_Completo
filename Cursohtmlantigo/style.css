@@ -1,0 +1,211 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,200&display=swap');
+
+body {
+    font-family: Arial, Helvetica, sans-serif;  
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26pt;
+    
+}
+p {
+    text-align: justify;
+    text-indent: 50px;
+    }
+
+div#interface {
+    width: auto;
+    background-color: rgba(243, 243, 243, 0.966);
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px gray;
+    padding: 15px;
+}/*-Primeiramente, deve-se criar uma div geral no body, e então delimita-se a width.
+-A margin delimita as margens, neste caso, no site em geral. É sempre na seguinte ordem: cima, direita, baixo, esquerda. O -20, na margem de cima, serve sempre para colar no topo do site. Pode ser usado auto para ser ajustado automaticamente com o navegador, especialmente na direita e na esquerda.*/
+
+header#cabecalho {
+    border-bottom: 1px gray solid;
+    height: 150px;
+    background: url("projeto-glass-html5/_imagens/glass-logo-peq.jpg") no-repeat 0px 100px;
+}/*Foi colocada a imagem através do css, mas poderia ser colocada em html e então manuseada sua posição, com position: absolute.*/
+header#cabecalho h1{
+    color: gray;
+    text-shadow: 1px 1px 1px grey;
+    margin-bottom: 0px;
+}
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif;
+}
+header#cabecalho img#oculos {
+    position: absolute;
+    left: 1080px;
+    top: 80px;
+}
+
+nav#menu {
+    display: block;
+}/*isto faz o menu virar um bloco, pois o bloco flutua pelo site.*/
+
+nav#menu ul{
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10px;
+    left: 600px;
+}/*tira as bolinhas, coloca tudo em maiúsculas, coloca numa posição absoluta para mover pela página, e põe no canto superior direito do site*/
+
+nav#menu li /*tudo que for li, dentro da nav com id menu*/{
+    display: inline-block;
+    background-color: rgba(11, 33, 235, 0.274);
+    padding: 10px;
+    margin: 4px;
+    border: 3px solid rgb(4, 18, 148);
+    border-radius: 25px; 
+}/*-display muda a forma que o objeto será apresentado, neste caso, num bloco horizontal.
+-padding cria um espaço dentro do objeto.
+-margin cria um espaço fora do objeto, nas margens.*/
+
+nav#menu h1 {
+    display: none;
+}/*-display muda a forma que o objeto será apresentado, neste caso, esconde o título h1.*/
+
+nav#menu li:hover {
+    background-color: rgb(110, 185, 60);
+}/*- O hover declara o que será feito quando o mouse for passado por cima do objeto.*/
+
+nav#menu a {
+    color: black;
+    text-decoration: none;
+}
+
+p#right {
+    color: rgb(28, 31, 224);
+    font-size: 18px;
+    text-align: center;
+}
+a#voltar {
+    color: black;
+    font-size: 17px;
+    background-position: center; 
+    background-color: rgba(11, 33, 235, 0.274);
+    padding: 10px;
+    margin: 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 3px solid rgb(4, 18, 148);
+    border-radius: 25px;  
+}
+a#voltar:hover {
+    background-color: rgb(110, 185, 60);
+}
+figure.fotolegenda {
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+}
+figure.fotolegenda img /*tudo que for img, dentro da figure com class fotolegenda*/{
+    width: 100%;
+    height: 100%;
+}
+figure.fotolegenda figcaption {
+    opacity: 0;
+    position: absolute;
+    color: blue;
+    font-size: 30px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.37);
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;
+}
+figure.fotolegenda:hover figcaption {
+    opacity: 1;/*este hover declara que a legenda só aparecerá quando passar com o mouse em cima da imagem.*/
+}
+table#tabelaspec {
+    border: 1px solid gray;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table#tabelaspec td {
+    border: 1px solid gray;
+    padding: 8px;
+    text-align: center;
+}
+table#tabelaspec caption {
+    font-weight: bold;
+    font-size: 13pt;
+    color: rgb(114, 113, 113);
+}
+table#tabelaspec td.ce {
+    background-color: rgba(165, 81, 42, 0.329);
+    font-weight: bold;
+}
+table#tabelaspec td.cd {
+    background-color: rgba(51, 51, 226, 0.315);
+}
+article#noticiaprincipal h2 {
+    background-color: rgba(128, 128, 128, 0.452);
+    padding: 5px 0px 5px 8px;
+    margin: 10px;
+}
+header#cabecalhoartigo h1{
+    font-family: 'Titillium Web', sans-serif;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+header#cabecalhoartigo h2{
+    background-color: rgba(243, 243, 243, 0.966);
+    font-size: 14pt;
+    margin: 0px;
+}
+header#cabecalhoartigo h3{
+    font-size: 13px;
+}
+section#corpo {
+    display: block;
+    width: 500px;
+    float: left;
+    border-right: 1px solid gray;
+    padding-right: 15px;
+}
+video {
+    display: block;
+    position: relative;
+    width: 400px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+aside#lateral {
+    display: block;
+    width: 560px;
+    float: right;
+    margin: 20px;
+    padding-right: 120px;
+    
+} /*-o display block faz tudo que estiver na tag aside ser um bloco, e o float faz esse bloco flutuar aonde eu desejar.*/
+aside#lateral h1{
+    font-family: 'Titillium Web', sans-serif;
+    margin-top: 20px;
+}
+aside#lateral h2{
+    background-color: rgba(128, 128, 128, 0.452);
+    padding: 5px 0px 5px 8px;
+    margin: 10px;
+}
+footer#rodape {
+    clear: both;
+    border-top: 1px solid gray;
+}/*o clear: both deixa o footer independente do aside e do section.
+
+-NUNCA COLOCAR POSIÇÃO ABSOLUTA EM TEXTOS. SOMENTE EM IMAGENS E MENUS.
+*/
+
+/*-o # é para apontar para uma id específica. O . é para classes.
+-text-indent cria parágrafos.
+-Para formatar imagens: width pra largura, height para altura. Use px para um tamanho específico e % para a imagem sempre ocupar uma certa porcentagem da tela, ajustando-se junto desta.
+-Border para borda.
+-Transition para colocar uma transição de determinados segundos.
+-position: absolute faz o objeto ter uma posição absoluta no site, já o position: relative, faz o objeto ter uma posição relativa dentro de onde ele está inserido.*/

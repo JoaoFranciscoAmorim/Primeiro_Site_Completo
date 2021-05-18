@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimídia</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="estilomidia.css">
+</head>
+<script src="../funcoes.js"></script>
+<body>
+    <div id="interface">
+    <header id="cabecalho">
+        <hgroup>
+        <h1>Google Glass</h1>
+        
+        <h2>A revolução do Google está chegando</h2>
+        </hgroup>
+        
+        <img src="_imagens/glass-oculos-preto-peq.png" id="oculos" alt="">
+        <!--hgroup agrupa vários títulos num mesmo grupo, para fins de formatação.
+        -<span> também pode ser usado para agrupar um trecho de texto, para formatação.
+        -&nbsp; é para dar espaços em branco. Vários deles significa vários espaços em branco.-->
+        <nav id="menu">
+        <h1>Menu Principal</h1>
+        <ul type="disc">
+            <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="../index.html">Home</a></li>
+            <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="specs.html">Especificações</a></li>
+            <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fotos.html">Fotos</a></li>
+            <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+            <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"> <a href="fale-conosco.html">Fale conosco</a></li>
+        </ul>
+        </nav>
+        <!--Tudo entre nav e /nav se transformará num menu de navegação, combinado com listas.
+        - target="_blank" dentro do a para abrir em outra aba.-->
+        </header>
+        <section id="corpofull">
+            <article id="noticiaprincipal">
+                <header id="cabecalhoartigo">
+                <hgroup>
+                <h3>Glass > &nbsp; Multimídia</h3>
+                <h1>Sons e Vídeos</h1>
+                <h2>por Gustavo Guanabara</h2>
+                <h2>Atualizado, por João Amorim, em 14/Maio/2021</h2>
+                </hgroup>
+                </header>
+    
+            <div id="radiotv">
+                <audio id="musica" src="media/2009-lovers-carvings-bibio.mp3" controls autoplay></audio>
+                <video id="filme" controls poster="_imagens/video-mini03.jpg">
+                    <source src="media/Getting-Started-wbm.webm" type="video/webm">
+                    <source src="media/getting-started.mp4" type="video/mp4">
+                    <source src="media/Getting-Started-kv.mkv" type="video/mkv">
+                    <p>Seu navegador não tem compatibilidade com reprodução de vídeos. Tente utilizar outro navegador.</p>
+                </video>
+            </div>
+
+</article>
+</section>
+    <footer id="rodape">
+    <p id="right">Copyright &copy; 2013 - by Gustavo Guanabara</p>
+    </footer>
+</div>
+</body>
+</html>

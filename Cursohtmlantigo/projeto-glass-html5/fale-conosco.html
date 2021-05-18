@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="estilofaleconosco.css">
+</head>
+<script src="../funcoes.js"></script>
+<body>
+    <div id="interface">
+    <header id="cabecalho">
+        <hgroup>
+        <h1>Google Glass</h1>
+        
+        <h2>A revolução do Google está chegando</h2>
+        </hgroup>
+        
+        <img src="_imagens/glass-oculos-preto-peq.png" id="oculos" alt="">
+        <!--hgroup agrupa vários títulos num mesmo grupo, para fins de formatação.
+        -<span> também pode ser usado para agrupar um trecho de texto, para formatação.
+        -&nbsp; é para dar espaços em branco. Vários deles significa vários espaços em branco.-->
+        <nav id="menu">
+        <h1>Menu Principal</h1>
+        <ul type="disc">
+            <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="../index.html">Home</a></li>
+            <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+            <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+            <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+            <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a href="fale-conosco.html">Fale conosco</a></li>
+        </ul>
+        </nav>
+        <!--Tudo entre nav e /nav se transformará num menu de navegação, combinado com listas.
+        - target="_blank" dentro do a para abrir em outra aba.-->
+        </header>
+        <section id="corpofull">
+            <article id="noticiaprincipal">
+                <header id="cabecalhoartigo">
+                <hgroup>
+                <h3>Fale Conosco > &nbsp; Contato</h3>
+                <h1>Página para Contato <br> (meramente ilustrativa &#x1F604;)</h1>
+                <h2>por Gustavo Guanabara</h2>
+                <h2>Atualizado, por João Amorim, em 14/Maio/2021</h2>
+                </hgroup>
+                </header>
+        <br>
+        <form method="POST" id="fContato" action="mailto:contato@cursoemvideo.com" oninput="calc_total();">
+        <!--Este method POST, combinado com o action mailto vai mandar todos os dados que o usuário colocar para o e-mail especificado.-->    
+        
+        <fieldset id="usuario">
+
+        <legend>Identificação do Usuário</legend>
+
+         <p> <label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="30" maxlength="50" placeholder="Nome Completo"></p>
+         <!--size30 = vão aparecer 30 caracteres na caixa, por motivos estéticos.
+        -maxlength50 = a caixa vai aceitar 50 caracteres no total.-->
+
+           <p> <label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" placeholder="10 dígitos" size="10" maxlength="10"> </p>
+
+           <p> <label for="cMail">E-mail:</label> <input type="email" name="tMail" id="cMail" size="30" maxlength="40"> </p>
+
+            <fieldset id="sexo"> <legend>Sexo:</legend>
+                <input type="radio" name="tSexo" id="cMasc"> <label for="cMasc">Masculino</label>
+                <!--Colocar 'checked' no primeiro input faz com que ele já comece marcado-->
+                <br>
+                <input type="radio" name="tSexo" id="cFemi"> <label for="cFemi">Feminino</label>
+            </fieldset>
+
+            <p> <label for="cData">Data de Nascimento:</label> <input type="date" name="tData" id="cData"></p>
+        </fieldset>
+
+        <fieldset id="endereco">
+        <legend>Endereço do Usuário</legend>
+
+           <p> <label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" placeholder="Rua, Av, Trav, ..."> </p>
+            <p> <label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum"> </p>
+            <p> <label for="cEstado">Estado:</label> <select name="tEstado" id="cEstado">
+            <optgroup label="Região Sudeste">
+                <option value="SP" selected>São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+            </optgroup>
+            <optgroup label="Região Sul">
+                <option value="PR">Paraná</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="RS">Rio Grande do Sul</option>
+            </optgroup>
+
+            </select> </p>
+            <p> <label for="cCidade">Cidade:</label> <input type="text" name="tCidade" id="cCidade"> </p>
+            
+        </fieldset>
+
+            <fieldset id="mensagem">
+
+        <legend>Mensagem do Usuário</legend>
+
+            <p><label for="cUrg">Grau de Urgência: </label> Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="1">Máx</p>
+            <p> <label for="cMsg">Mensagem:</label> <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+        </fieldset>
+
+            <fieldset id="pedido">
+        
+            <legend>Quero um Google Glass</legend>
+
+            <p><input type="checkbox" name="tPed" id="cPed" checked> <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label> </p>
+            <p><label for="cCor">Cor:</label> <input type="color" name="tCor" id="cCor"></p>
+            <p><label for="cQtd">Quantidade:</label><input type="number" name="tQtd" id="cQtd" value="0"> </p>
+            <p><label for="cTot">Preço Total: R$</label> <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p>
+        </fieldset>
+
+        <input type="button" value="ENVIAR" name="jmk" id="jkm">
+
+        </form>
+        
+</article>
+</section>
+    <footer id="rodape">
+    <p id="right">Copyright &copy; 2013 - by Gustavo Guanabara</p>
+    </footer>
+</div>
+</body>
+</html>
